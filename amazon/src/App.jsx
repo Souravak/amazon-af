@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import "./App.css";
+import { db } from "./firebase";
+import { collection, setDoc, Timestamp, getDocs, doc } from "firebase/firestore";
 
 function extractASIN(url) {
   const match = url.match(/\/dp\/([A-Z0-9]{10})/i);
@@ -11,10 +13,26 @@ export default function App() {
   const [input, setInput] = useState("");
   const [affiliateLink, setAffiliateLink] = useState("");
 
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     const asin = extractASIN(input);
     if (asin) {
-      setAffiliateLink(`https://www.amazon.in/dp/${asin}?tag=getcartamzn-21`);
+      const link = `https://www.amazon.in/dp/${asin}?tag=getcartamzn-21`;
+      setAffiliateLink(link);
+      try {
+        // Get all docs to determine next serial number
+        const linksCol = collection(db, "Links");
+        const snapshot = await getDocs(linksCol);
+        const nextId = (snapshot.size + 1).toString();
+        await setDoc(doc(db, "Links", nextId), {
+          serial: nextId,
+          originalUrl: input,
+          asin,
+          affiliateLink: link,
+          created: Timestamp.now()
+        });
+      } catch (err) {
+        console.error("Error saving to Firestore:", err);
+      }
     } else {
       setAffiliateLink("");
       alert("Invalid Amazon link or ASIN not found.");
