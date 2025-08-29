@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/amazon-af/static/css/main.7ceb8762.css",
+    "main.js": "/amazon-af/static/js/main.a65934a5.js",
+    "index.html": "/amazon-af/index.html",
+    "main.7ceb8762.css.map": "/amazon-af/static/css/main.7ceb8762.css.map",
+    "main.a65934a5.js.map": "/amazon-af/static/js/main.a65934a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ceb8762.css",
+    "static/js/main.a65934a5.js"
+  ]
+}
