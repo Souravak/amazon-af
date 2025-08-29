@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/amzn-af/static/css/main.1f70f366.css",
-    "main.js": "/amzn-af/static/js/main.ff96da4c.js",
+    "main.js": "/amzn-af/static/js/main.bc6bd8d9.js",
     "index.html": "/amzn-af/index.html",
     "main.1f70f366.css.map": "/amzn-af/static/css/main.1f70f366.css.map",
-    "main.ff96da4c.js.map": "/amzn-af/static/js/main.ff96da4c.js.map"
+    "main.bc6bd8d9.js.map": "/amzn-af/static/js/main.bc6bd8d9.js.map"
   },
   "entrypoints": [
     "static/css/main.1f70f366.css",
-    "static/js/main.ff96da4c.js"
+    "static/js/main.bc6bd8d9.js"
   ]
 }
