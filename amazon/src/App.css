@@ -1,0 +1,121 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* Amazon Affiliate Link Generator Basic CSS */
+
+  .affiliate-app-bg {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f6fa;
+  }
+
+  .affiliate-app-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 2rem 1.5rem;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .affiliate-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .affiliate-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .affiliate-input:focus {
+    border-color: #2563eb;
+  }
+
+  .affiliate-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.2rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .generate-btn {
+    background: #2563eb;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+  .generate-btn:hover {
+    background: #1d4ed8;
+  }
+  .copy-btn {
+    background: #22c55e;
+    color: #fff;
+  }
+  .copy-btn:hover {
+    background: #16a34a;
+  }
+  .open-btn {
+    background: #facc15;
+    color: #fff;
+  }
+  .open-btn:hover {
+    background: #eab308;
+  }
+  .reset-btn {
+    background: #6b7280;
+    color: #fff;
+  }
+  .reset-btn:hover {
+    background: #374151;
+  }
+
+  .affiliate-output-box {
+    width: 100%;
+    background: #f3f4f6;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .affiliate-link {
+    word-break: break-all;
+    font-size: 1.1rem;
+    font-family: monospace;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .affiliate-btn-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media (max-width: 500px) {
+    .affiliate-app-container {
+      padding: 1rem 0.5rem;
+    }
+    .affiliate-title {
+      font-size: 1.2rem;
+    }
+  }
+}
